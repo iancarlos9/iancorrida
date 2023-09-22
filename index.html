@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscrição na Corrida</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='imagens/plantas.jpg') }}" alt="Plantas">
+    </header>
+    <main>
+        <div class="container">
+            <h1>Inscrição na Corrida</h1>
+            <form method="POST">
+                <label for="Nome">Nome:</label>
+                <input type="text" name="nome" required><br><br>
+
+                <label for="Telefone">Telefone:</label>
+                <input type="text" name="telefone" required><br><br>
+
+                <label for="Email">Email:</label>
+                <input type="email" name="email" required><br><br>
+
+                <label for="Idade">Idade:</label>
+                <input type="number" name="idade" required><br><br>
+
+                <label for="Distancia">Distância:</label>
+                <select name="distancia" required>
+                    <option value="5km">5 km</option>
+                    <option value="10km">10 km</option>
+                </select><br><br>
+
+                <input type="submit" value="Inscrever-se">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
